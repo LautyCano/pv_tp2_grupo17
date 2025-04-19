@@ -4,26 +4,17 @@
 
 let año = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
 
-const RetornarMes = () => {
+const boton = document.getElementById("Envia");
+
+boton.addEventListener("click",  () => {
     let meses = document.getElementById("mese").valueAsNumber;
 
-    if (meses <= 12 && meses > 0 )
+    if (meses >= 1 && meses <= 12) 
     {
-        let cont = 1;
-        for (let i = 0; i < 12; i++)
-        {
-            if (cont == meses)
-            {
-                console.log ("El numero " + meses +" Pertenece al mes: " + año[i]);
-                break;
-            }
-            cont++; 
-        }
-        
+        console.log("El número " + meses + " pertenece al mes: " + año[meses - 1]);
     }
     else
     {
         console.log ("El Número " + meses + " No es un mes del Año");
     }
-};
-document.getElementById("Envia").addEventListener("click", RetornarMes);
+});

@@ -1,7 +1,8 @@
 //Escribir una función llamada contarLetraA que reciba un string y retorne el número de
 // veces que aparece la letra "a".
+const boton = document.getElementById("Envia");
 
-const ContarLetraA = () => 
+boton.addEventListener("click", () => 
     {
         let pala = document.getElementById("palabra").value;
         let letra = pala.split(''); // split divide un string en partes y si le pasas '' lo parte en caracteres individuales
@@ -15,5 +16,4 @@ const ContarLetraA = () =>
             }
         }
         console.log( "La cantidad de A que hay en la palabra " + pala + " es de " + cont);
-    };
-    document.getElementById("Envia").addEventListener("click", ContarLetraA);
+    });
