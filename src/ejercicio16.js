@@ -3,7 +3,9 @@
 // en ese rango (incluyéndolos).
 // El número inicial debe ser menor o igual que el número final
 
-const SumarRango = () => {
+const boton = document.getElementById("Envia");
+
+boton.addEventListener("click", () => {
     let min = document.getElementById("minimo").valueAsNumber;
     let max = document.getElementById("maximo").valueAsNumber;
 
@@ -22,5 +24,4 @@ const SumarRango = () => {
     {
         console.log ("El Número " + min + " Es mayor a " + max );
     }
-};
-document.getElementById("Envia").addEventListener("click", SumarRango);
+});
