@@ -1,8 +1,13 @@
-import { actualizarTexto } from "pv_tp2_grupo17/src/ejercicio21.js";
-import { cambiarColor } from "pv_tp2_grupo17/src/ejercicio22.js";
+const input = document.getElementById('userInput');
+const display = document.getElementById('display');
 
-const input = document.getElementById("inputTexto");
-const textoMostrado = document.getElementById("textoMostrado");
+input.addEventListener('input', () => {
+  const text = input.value;
+  display.textContent = text;
 
-actualizarTexto(input, textoMostrado);
-cambiarColor(input, textoMostrado);
+  if (text.length > 20) {
+    display.classList.add('long-text');
+  } else {
+    display.classList.remove('long-text');
+  }
+});
