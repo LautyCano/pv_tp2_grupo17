@@ -1,6 +1,8 @@
-import { actualizarTexto } from "pv_tp2_grupo17/src/ejercicio21.js";
+// Capturamos el input y el párrafo
+const inputTexto = document.getElementById('inputTexto');
+const mostrarTexto = document.getElementById('mostrarTexto');
 
-const input = document.getElementById("inputTexto");
-const textoMostrado = document.getElementById("textoMostrado");
-
-actualizarTexto(input, textoMostrado);
+// Escuchamos el evento "input"
+inputTexto.addEventListener('input', () => {
+  mostrarTexto.textContent = inputTexto.value;
+});
